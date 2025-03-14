@@ -1,8 +1,17 @@
 <?php
 
+use App\Http\Controllers\FolderController;
+
+use Illuminate\Support\Facades\Route;
+
 Route::redirect('/', '/login');
 Route::redirect('/home', '/admin');
 Auth::routes();
+
+
+Route::get('/import-folders', [FolderController::class, 'importFolders']);
+Route::get('/folders', [FolderController::class, 'getFolders']);
+
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::redirect('/', '/admin/expenses');

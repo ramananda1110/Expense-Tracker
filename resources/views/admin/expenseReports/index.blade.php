@@ -9,7 +9,7 @@
                 <div class="col-3 form-group">
                     <label class="control-label" for="y">{{ trans('global.year') }}</label>
                     <select name="y" id="y" class="form-control">
-                        @foreach(array_combine(range(date("Y"), 1980), range(date("Y"), 1980)) as $year)
+                        @foreach(array_combine(range(date("Y"), 2000), range(date("Y"), 2000)) as $year)
                             <option value="{{ $year }}" @if($year===old('y', Request::get('y', date('Y')))) selected @endif>
                                 {{ $year }}
                             </option>
