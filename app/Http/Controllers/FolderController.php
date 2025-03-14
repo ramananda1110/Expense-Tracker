@@ -28,7 +28,6 @@ class FolderController extends Controller
         });
 
         // Store folder names in the database
-        // Store folder names in the database
         foreach ($folders as $folderName) {
             try {
                 // Ensure folder name is treated as a string
