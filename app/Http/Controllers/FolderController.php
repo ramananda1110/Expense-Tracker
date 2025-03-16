@@ -12,7 +12,10 @@ class FolderController extends Controller
 
     public function importFolders()
     {
-        $directoryPath = '/Users/sarkar/Documents/Panchagarh_XEN';
+       // $directoryPath = '/Users/sarkar/Documents/Panchagarh_XEN';
+
+        $directoryPath = '/home/ramananda/Documents/LGD/Validated Certificates (Panchagarh)/Panchagarh_XEN';
+
 
         if (!file_exists($directoryPath)) {
             return response()->json(['error' => 'Directory does not exist'], 404);
@@ -46,7 +49,7 @@ class FolderController extends Controller
     }
 
     
-        public function getFolders()
+    public function getFolders()
     {
         return response()->json(Folder::all());
     }
