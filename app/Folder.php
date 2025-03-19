@@ -9,5 +9,6 @@ class Folder extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'completion_status', 'ipc_count'];
+
 }

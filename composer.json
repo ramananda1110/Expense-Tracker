@@ -17,6 +17,8 @@
         "laravel/passport": "^10.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
+        "smalot/pdfparser": "^2.11",
+        "spatie/pdf-to-text": "^1.54",
         "yajra/laravel-datatables-oracle": "^9.6"
     },
     "require-dev": {

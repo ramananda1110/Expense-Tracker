@@ -13,19 +13,15 @@ class CreateFoldersTable extends Migration
      */
     public function up()
     {
-
         Schema::create('folders', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();  // Make sure it's a string
+            $table->string('name');
+            $table->integer('ipc_count')->default(0);
+            $table->string('completion_status')->default('inprogress');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('folders');
